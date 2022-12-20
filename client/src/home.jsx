@@ -42,6 +42,10 @@ const Home = () =>{
         dispatch(login(res.data))
     }
 
+    const handleClick = async () => {
+        const {data:res} = await axios.get('/api/test');
+        console.log(res)
+      }
 
     return(
         <div className="appWrapper">
@@ -52,6 +56,7 @@ const Home = () =>{
                 <button onClick={()=>testFetch('protected')}>PROTECTED</button>
                 <button onClick={()=>testFetch('unprotected')}>UNPROTECTED</button>
                {isLoggedIn && <button onClick={()=>testFetch('logout')}>LOGOUT</button>}
+                <button onClick={handleClick}>HELLO</button>
             </div>
         </div>
     )
