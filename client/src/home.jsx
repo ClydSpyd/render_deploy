@@ -36,11 +36,11 @@ const Home = () =>{
     //     }
     // }
 
-    // const testLogin = async () => {
-    //     const res = await axios.post(`/api/auth/login`, { userName: "DAVE", password: "helloWorld" });
-    //     console.log(res);
-    //     dispatch(login(res.data))
-    // }
+    const testLogin = async () => {
+        const res = await axios.post(`/api/auth/login`, { userName: "DAVE", password: "helloWorld" });
+        console.log(res);
+        dispatch(login(res.data))
+    }
 
     const handleClick = async () => {
         const {data:res} = await axios.get('/api/test');
@@ -51,8 +51,8 @@ const Home = () =>{
         <div className="appWrapper">
             <img className='logo spinBlock' src={logo} alt="" />
             <div style={{position:"relative", zIndex:"500"}} className="buttons">
-               {/* {!isLoggedIn && <button onClick={()=>testLogin('get_token')}>LOGIN</button>}
-                <button onClick={testCreate}>CREATE</button> */}
+                {!isLoggedIn && <button onClick={()=>testLogin('get_token')}>LOGIN</button>}
+                {/* <button onClick={testCreate}>CREATE</button> */}
                 <button onClick={()=>testFetch('protected')}>PROTECTED</button>
                 <button onClick={()=>testFetch('unprotected')}>UNPROTECTED</button>
                {isLoggedIn && <button onClick={()=>testFetch('logout')}>LOGOUT</button>}
