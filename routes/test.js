@@ -4,6 +4,11 @@ const authMiddle = require("../middleware/authMiddle");
 const config = require("config");
 const router = express.Router();
 
+router.get('/', (req, res) => {
+
+  return res.send(`Hello world`)
+})
+
 router.get("/get_token", async (req, res) => {
   const userObj =  { userId: "1234", userName: "CAPTAIN DAVE", role: 1}
   const token = jwt.sign(
