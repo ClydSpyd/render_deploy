@@ -1,0 +1,63 @@
+/* @keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    
+    15%{
+        transform: rotate(60deg);
+    }
+    
+    20%{
+        transform: rotate(60deg);
+    }
+    
+    35%{
+        transform: rotate(120deg);
+    }
+    
+    40%{
+        transform: rotate(120deg);
+    }
+    
+    55%{
+        transform: rotate(180deg);
+    }
+    
+    60%{
+        transform: rotate(180deg);
+    }
+    
+    90%{
+        transform: rotate(0deg);
+    }
+} */
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    
+    15%{
+        transform: rotate(120deg);
+    }
+    
+    20%{
+        transform: rotate(120deg);
+    }
+    
+    35%{
+        transform: rotate(240deg);
+    }
+    
+    40%{
+        transform: rotate(240deg);
+    }
+    
+    90%{
+        transform: rotate(0deg);
+    }
+}
+
+.spinBlock{
+    transition: all ;
+    animation: spin 6s linear infinite;
+}
