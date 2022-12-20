@@ -3,10 +3,10 @@ import logo from './assets/logo_webpack.svg'
 import axios from 'axios'
 import './styles/main.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { login, logout } from '../Redux/Reducers/authReducer';
+import { login, logout } from './Redux/Reducers/authReducer';
 
 
-const App = () =>{
+const Home = () =>{
 
     const dispatch = useDispatch();
     const { isLoggedIn } = useSelector(state => state.auth) 
@@ -58,4 +58,4 @@ const App = () =>{
     
 }
 
-export default App;
+export default Home;
