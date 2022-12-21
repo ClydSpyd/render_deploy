@@ -49,6 +49,7 @@ const Home = () =>{
 
     return(
         <div className="appWrapper">
+            <h4>{process.env.REACT_APP_TEST_KEY}</h4>
             <img className='logo spinBlock' src={logo} alt="" />
             <div style={{position:"relative", zIndex:"500"}} className="buttons">
                 {!isLoggedIn && <button onClick={()=>testLogin('get_token')}>LOGIN</button>}
