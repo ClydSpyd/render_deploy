@@ -23,9 +23,7 @@
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.2",
-    "node-sass": "^8.0.0"
-  },
-  "devDependencies": {
+    "node-sass": "^8.0.0",
     "concurrently": "^7.4.0",
     "nodemon": "^2.0.20"
   }
