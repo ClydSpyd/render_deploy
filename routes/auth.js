@@ -59,7 +59,7 @@ router.post(
       return res.cookie("auth_token", token).json({ id:userObj.id, userName: userObj.userName });
     } catch (err) {
       console.error(err.message);
-      res.status(500).send("server error");
+      res.status(500).json({msg:"server error", err});
     }
   }
 );
