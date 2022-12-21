@@ -13,7 +13,7 @@ router.get("/get_token", async (req, res) => {
   const userObj =  { userId: "1234", userName: "CAPTAIN DAVE", role: 1}
   const token = jwt.sign(
     userObj,
-    config.get("jwtSecret")
+    process.env.JWT_SECRET
   );
 
   return res

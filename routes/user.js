@@ -49,7 +49,7 @@ router.post(
 
       const authTokenPayload = { userName, id: user.id };
 
-      const authToken = jwt.sign(authTokenPayload, config.get("jwtSecret"));
+      const authToken = jwt.sign(authTokenPayload, process.env.JWT_SECRET);
 
       return res
         .status(200)

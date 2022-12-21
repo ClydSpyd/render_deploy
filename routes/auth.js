@@ -54,7 +54,7 @@ router.post(
         });
       }
 
-      const token = jwt.sign({...userObj}, config.get("jwtSecret"));
+      const token = jwt.sign({...userObj}, process.env.JWT_SECRET);
 
       return res.cookie("auth_token", token).json({ id:userObj.id, userName: userObj.userName });
     } catch (err) {
